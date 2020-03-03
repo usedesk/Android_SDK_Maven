@@ -2,21 +2,14 @@
 
 (Usedesk SDK)[https://github.com/usedesk/Android_SDK]
 
-Добавьте в `build.gradle` вашего проекта строку:
+Добавьте в dependencies `build.gradle` вашего модуля строки, для использования только SDK библиотек:
 ```
-allprojects {
-    repositories {
-        ...
-        maven { url 'https://github.com/usedesk/Android_SDK_Maven/raw/master/' }
-    }
-}
+implementation 'ru.usedesk:chat-sdk:{last_version}'
+implementation 'ru.usedesk:knowledgebase-sdk:{last_version}'
 ```
 
-Добавьте в `build.gradle` вашего модуля строку:
+Или для использования готовых элементов интерфейса:
 ```
-dependencies {
-    ...
-    implementation 'ru.usedesk:usedesk_sdk:1.0.2'
-    ...
-}
+implementation 'ru.usedesk:chat-gui:{last_version}'
+implementation 'ru.usedesk:knowledgebase-gui:{last_version}'
 ```
